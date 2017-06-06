@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>2017满意度调查</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script>
+    !function (window) {
+        var docWidth = 750;
+        var doc = window.document,
+            docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        var recalc = (function refreshRem () {
+            var clientWidth = docEl.getBoundingClientRect().width;
+            docEl.style.fontSize = Math.max(Math.min(20 * (clientWidth / docWidth), 11.2), 8.55) * 5 + 'px';
+            return refreshRem;
+        })();
+        docEl.setAttribute('data-dpr', window.navigator.appVersion.match(/iphone/gi) ? window.devicePixelRatio : 1);
+        if (/iP(hone|od|ad)/.test(window.navigator.userAgent)) {
+            doc.documentElement.classList.add('ios');
+            if (parseInt(window.navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/)[1], 10) >= 8)
+                doc.documentElement.classList.add('hairline');
+        }
+        if (!doc.addEventListener) return;
+        window.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    }(window)
+    </script>
+</head>
+<body>
+    <div id="pageLoading" class="pageLoading">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+    <img src="images/banner_2017.jpg" alt="" style="width:100%;"> 
+<div class="main">
+    <header>
+        <p class="tt">尊敬的投资者：</p>
+        <p class="tt">为了更好地为您提供服务，感谢您于百忙之中参与我司2017年投资者满意度调查，您所提的每一项宝贵意见都将成为我们改进的方向。</p>
+    </header>
+    <form name="form1" class="add">
+    </form>
+    <p class="tt">到此，您已经填完了整张问卷，我们再次衷心的感谢您对我们公司的支持。我们一定会根据您对我们的意见和建议，把我们对您的服务做得更好。愿我们能陪伴您在事业上取得更大的成就！</p>
+    <div class="m-button">
+        <a href="javascript:;" class="btn-block btn-primary" id="J_Btn">提交</a>
+    </div>
+</div>
+</body>
+<script src="js/app.js"></script>
+</html>
